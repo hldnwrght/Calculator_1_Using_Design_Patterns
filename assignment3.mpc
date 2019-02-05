@@ -1,0 +1,22 @@
+// $Id: assignment3.mpc 378 2010-02-07 22:09:38Z hillj $
+
+project (assignment3) {
+  exename = assignment3
+  install = .
+ 
+  specific (make, gnuace) {
+    compile_flags += -std=c++11
+  }
+
+  Source_Files {
+    Driver.cpp
+	Evaluate_Postfix.cpp
+	Infix_To_Postfix.cpp
+	Precedence.cpp
+  }
+
+  Template_Files {
+    Array.cpp
+    Stack.cpp
+  }
+}
